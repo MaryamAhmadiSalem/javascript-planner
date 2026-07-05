@@ -3,6 +3,7 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    overflow: hidden;
     width: 100%;
     height: 715px;
     border: 2px solid black;
@@ -22,12 +23,23 @@
 }
 .body{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     top: 148px;
     left: 20px;
     width: 450px ;
     height: 540px;
     border: 2px solid black;
     border-radius: 15px ;
+    overflow-y: auto
+}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+.row{
+    margin-top: 30px ;      
 }
 .time{
     position: absolute;
@@ -38,4 +50,44 @@
     position: absolute;
     left: 20px;
     font-size: 18px;
+}
+.checkBox{
+    position: absolute;
+    appearance: none;    /*حذف استایل پیش فرض چک باکس */
+    border: 2px solid rgba(0, 0, 0, 0.877);
+    border-radius: 8px;
+    width: 25px ;
+    height: 30px ;
+    right: 15px ;
+}
+:checked{       /*استایل مدنظر برای باکس */
+    background-color: #b8e3e8;
+    border-radius: 8px;
+}
+:checked::after{    /*استایل مدنظر برای تیک درونی */
+    display: block;
+    text-align: center;
+    content: '✓';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #319eb1;
+}
+.text{
+    position: absolute;
+    direction: rtl;
+    font-size: larger;
+    width: 300px;
+    height: 30px;
+    right:  60px;
+    border-radius: 10px;
+}  
+.icon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 45px;
+}
+.addIcon{
+    left: 10px;
 }
