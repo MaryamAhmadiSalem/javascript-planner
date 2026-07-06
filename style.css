@@ -13,26 +13,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+    color: #552b0d;
     top: 20px;
     left: 20px;
-    width: 450px;
+    width: 650px;
     height: 100px;
     border: 2px solid black;
     border-radius: 15px ;
     font-size: 25px;
+    box-shadow: -5px 5px 8px 0 rgba(0,0,0,0.2);
 }
 .body{
     position: absolute;
     display: flex;
     flex-direction: column;
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
     gap: 20px;
     top: 148px;
     left: 20px;
-    width: 450px ;
+    width: 650px ;
     height: 540px;
     border: 2px solid black;
     border-radius: 15px ;
-    overflow-y: auto
+    overflow-y: auto;
+    box-shadow: -5px 5px 8px 0 rgba(0,0,0,0.2);
 }
 ::-webkit-scrollbar {
     width: 0;
@@ -41,19 +50,35 @@
 .row{
     margin-top: 30px ;      
 }
+.style{
+    position: absolute;
+    margin-top: 15px;
+    width: 140px;
+    height: 160px;
+    right: 0;
+    background-image: url("background-remover-1783354621793.png");
+    background-size: cover;
+    background-position: center;
+}
 .time{
     position: absolute;
-    right: 20px;
+    margin-top: 45%;
+    right: 50px;
     font-size: 18px;
+}
+.dateStyle{
+    left : 0;
 }
 .date{
     position: absolute;
-    left: 20px;
+    margin-top: 45%;
+    left: 35px;
     font-size: 18px;
 }
 .checkBox{
     position: absolute;
     appearance: none;    /*حذف استایل پیش فرض چک باکس */
+    background-color: #f4eddf;
     border: 2px solid rgba(0, 0, 0, 0.877);
     border-radius: 8px;
     width: 25px ;
@@ -61,7 +86,7 @@
     right: 15px ;
 }
 :checked{       /*استایل مدنظر برای باکس */
-    background-color: #b8e3e8;
+    background-color: #ffffaa;
     border-radius: 8px;
 }
 :checked::after{    /*استایل مدنظر برای تیک درونی */
@@ -71,12 +96,14 @@
     font-size: 20px;
     font-weight: bold;
     line-height: 28px;
-    color: #319eb1;
+    color: #8B4513;
 }
 .text{
     position: absolute;
     direction: rtl;
     font-size: larger;
+    background-color: #f4eddf;
+    color: #552b0d;
     width: 300px;
     height: 30px;
     right:  60px;
@@ -86,8 +113,26 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 45px;
+    left: 55px;
 }
 .addIcon{
-    left: 10px;
+    left: 15px;
+}
+.timer{
+    position: absolute;
+    background-color: #f4eddf;
+    left: 110px;
+    margin-top: 4px;
+    border-radius: 10px;
+    width: 95px;
+    height: 25px;
+}
+.stopAlarm{
+    position: absolute;
+    left: 210px;
+    margin-top: 4px;
+    border-radius: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50% ;
 }
