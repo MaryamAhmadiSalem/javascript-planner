@@ -31,7 +31,7 @@ function input(){
                 console.log(items)
             }else{
                 items[i].isStatus = false
-                inputText.style.color = "black";
+                inputText.style.color = "#552b0d";
                 console.log(items)
             }
         })
@@ -55,7 +55,7 @@ function input(){
             alarm.pause();
             alarm.currentTime  = 0
             alarmTurnedOff = true
-            inputText.style.color = "black"
+            inputText.style.color = "#552b0d"
         })
         abort.type = "button"
         abort.className = "stopAlarm"
@@ -107,7 +107,7 @@ let data = localStorage.getItem("myItems")
 if(data != null){
     items = JSON.parse(data)
 }
-localStorage.clear()
+// localStorage.clear()
 input()
 
 let dateTime = new Date();
@@ -138,8 +138,8 @@ setInterval(()=>{
             alarmActiv = true
             if(alarmTurnedOff == false){
                 console.log("alarm")
+                inputText[i].style.color = "red"
                 alarm.play();
-                inputText[i].style.color = "red";
             }
         }
     }
